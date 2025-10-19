@@ -1,8 +1,9 @@
-import "bootstrap/dist/css/bootstrap.min.css"
+
 import "./_Estilos/bootstrap.scss";
 import "./_Estilos/General.css";
 import "./_Estilos/Estrutural.css";
 import "./globals.css";
+import "bootstrap/dist/css/bootstrap.min.css"
 
 
 import type { Metadata } from "next";
