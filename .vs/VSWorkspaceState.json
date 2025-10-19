@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Estudo",
+    "\\app\\Estudo\\[id]",
+    "\\app\\Estudo\\[id]\\@modal",
+    "\\app\\Estudo\\[id]\\@modal\\Imagem",
+    "\\app\\Estudo\\[id]\\@modal\\Imagem\\[idPost]",
+    "\\app\\_ComponentesBasicos",
+    "\\app\\_ComponentesBasicos\\DataBaseFunctions",
+    "\\app\\_Estilos"
+  ],
+  "SelectedNode": "\\app\\_ComponentesBasicos\\DataBaseFunctions\\ColetarTudo.tsx",
+  "PreviewInSolutionExplorer": false
+}

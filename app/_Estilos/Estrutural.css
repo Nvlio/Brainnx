@@ -1,0 +1,184 @@
+/*Pesquise pelas palavras apos os 2 pontos*/
+
+/*Estilo da parte de Lista : Lista*/
+/*Estilo da Barra de Pesquisa: Pesquisa*/
+/*Estilo da Formulario: Formulario*/
+
+/*Lista*/
+.TituloPrincipal {
+    margin-left: 2%;
+    font-size: 2em;
+    color: black
+}
+
+
+
+.listaEstilo {
+    border: black 1px solid;
+    color: black;
+    border-radius: 10px;
+    width: 95%;
+    height: 25vh;
+    display: flex;
+    justify-self: center;
+    margin-bottom: 2vh;
+    cursor: pointer;
+    background-color: #F5F5F5;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+    .listaEstilo h1 {
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .listaEstilo p {
+        font-size: 15px;
+    }
+
+    .listaEstilo h3 {
+        font-size: 13px;
+        color: lightgray;
+        text-align: end;
+        margin-right: 2%;
+    }
+
+    .listaEstilo .Imagem {
+        background-color: gray;
+        width: 200px;
+        height: 23vh;
+        border-radius: 10px;
+        margin: 7px;
+    }
+
+
+.tagEstilo {
+    border-radius: 10px;
+    background-color: #877FEB;
+    color: white;
+    width: 80px;
+    font-size: 15px;
+    height: 4vh;
+    padding: 2% 10%;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+
+/*Pesquisa*/
+.pesquisaEstilo {
+    background-color: #C2C2C2;
+    width: 100%;
+    height: 2vh;
+    padding: 1%;
+    transition: height 0.4s;
+    z-index: 1;
+    position: relative;
+}
+
+    .pesquisaEstilo.ampliado {
+        height: 10vh;
+    }
+
+.pesquisaInput {
+    color: black;
+    border: black 1px solid;
+    border-radius: 10px;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+    .pesquisaInput.visivel {
+        opacity: 1;
+    }
+
+    .pesquisaInput input {
+        width: 90%;
+        height: 4vh;
+        padding-left: 1%;
+        background-color: white;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .pesquisaInput button {
+        width: 10%;
+        border-radius: 0px 10px 10px 0px;
+        background-color: lightgray;
+    }
+
+        .pesquisaInput button.sobre {
+            cursor: pointer;
+            color: white;
+            background-color: gray
+        }
+
+
+/*Formulario*/
+.containerForm {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction:column
+}
+
+.inputStyle {
+    width: 96%;
+    height: 5vh;
+    margin: 2%;
+    font-size: 1.5em;
+    padding-left: 1%;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.textAreaStyle {
+    background-color: white;
+    color: black;
+    width: 96%;
+    height: 20vh;
+    margin: 2%;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+.buttonStyle {
+    border-radius: 10px;
+    height: 7vh;
+    width: 20%;
+    cursor: pointer;
+    margin: 1% 1%;
+}
+
+.tagsContainerStyle {
+    background-color: white;
+    color: black;
+    height: auto;
+    margin: 0.5%;
+    border-radius: 10px;
+    padding: 0.5%;
+    justify-content: center;
+}
+
+.videoContainerStyle {
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 10vh;
+    margin: 1%;
+    border-radius: 10px;
+    padding: 2% 1%;
+}
+
+.rowStyle {
+    overflow: auto;
+    scrollbar-color: gray;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,14 @@
+.HemisferioEsquerdo {
+    height:5vh;
+    width:10px;
+    background-color:aqua;
+}
+
+.HemisferioDireito {
+    height: 5vh;
+    width: 10px;
+    background-color:antiquewhite
+}
+
+.circulo {
+}
