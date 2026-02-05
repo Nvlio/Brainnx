@@ -13,51 +13,71 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model EstudoTags{
-estudo Estudo @relation(fields:[estudoId],references:[id])
-estudoId Int
-tag Tag @relation(fields:[tagId],references:[id])
-tagId Int
-
-@@id([estudoId,tagId])
+model Usuario {
+  id      Int      @id @default(autoincrement())
+  nome    String   @unique
+  classes Classe[]
 }
 
-model Estudo{
-id Int @id @default(autoincrement())
-titulo String @unique
-corpo String @db.Text
-data DateTime @default(now())
-tags EstudoTags[] 
-videos Video[]
-fotos Foto[]
+model Classe {
+  id     Int      @id @default(autoincrement())
+  nome   String
+  estudo Estudo[]
 
-anteriorid	Int?
-posteriorid Int?
+  criador   Usuario @relation(fields: [criadorId], references: [id])
+  criadorId Int
 
-anterior Estudo? @relation("EstudoAnterior",fields:[anteriorid],references:[id])
-posterior Estudo? @relation("EstudoPosterior",fields:[posteriorid],references:[id])
-
-anteriores Estudo[] @relation("EstudoAnterior")
-posteriores Estudo[] @relation("EstudoPosterior")
+  @@unique([nome, criadorId])
 }
 
-model Tag{
-id Int @id @default(autoincrement())
-nome String @unique
-estudo EstudoTags[]
+model EstudoTags {
+  estudo   Estudo @relation(fields: [estudoId], references: [id])
+  estudoId Int
+  tag      Tag    @relation(fields: [tagId], references: [id])
+  tagId    Int
+
+  @@id([estudoId, tagId])
 }
 
-model Video{
-id Int @id @default(autoincrement())
-url String
-titulo String
-estudoId Int
-estudo Estudo @relation(fields:[estudoId],references:[id])
+model Estudo {
+  id     Int          @id @default(autoincrement())
+  titulo String       @unique
+  corpo  String       @db.Text
+  data   DateTime     @default(now())
+  tags   EstudoTags[]
+  videos Video[]
+  fotos  Foto[]
+
+  anteriorid  Int?
+  posteriorid Int?
+
+  estudoClass   Classe @relation(fields: [estudoClassId], references: [id])
+  estudoClassId Int
+
+  anterior  Estudo? @relation("EstudoAnterior", fields: [anteriorid], references: [id])
+  posterior Estudo? @relation("EstudoPosterior", fields: [posteriorid], references: [id])
+
+  anteriores  Estudo[] @relation("EstudoAnterior")
+  posteriores Estudo[] @relation("EstudoPosterior")
 }
 
-model Foto{
-id Int @id @default(autoincrement())
-nome String
-estudoId Int
-estudo Estudo @relation(fields:[estudoId],references:[id])
+model Tag {
+  id     Int          @id @default(autoincrement())
+  nome   String       @unique
+  estudo EstudoTags[]
+}
+
+model Video {
+  id       Int    @id @default(autoincrement())
+  url      String
+  titulo   String
+  estudoId Int
+  estudo   Estudo @relation(fields: [estudoId], references: [id])
+}
+
+model Foto {
+  id       Int    @id @default(autoincrement())
+  nome     String
+  estudoId Int
+  estudo   Estudo @relation(fields: [estudoId], references: [id])
 }

@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\app\\Estudo",
-    "\\app\\Estudo\\[id]",
-    "\\app\\Estudo\\[id]\\@modal",
-    "\\app\\Estudo\\[id]\\@modal\\Imagem",
-    "\\app\\Estudo\\[id]\\@modal\\Imagem\\[idPost]",
-    "\\app\\_ComponentesBasicos",
-    "\\app\\_ComponentesBasicos\\DataBaseFunctions",
-    "\\app\\_Estilos"
+    "\\app\\api",
+    "\\app\\api\\upload",
+    "\\Componentes",
+    "\\Componentes\\widgets",
+    "\\prisma",
+    "\\prisma\\migrations",
+    "\\public",
+    "\\public\\Fotos",
+    "\\public\\Fotos\\Gerais"
   ],
-  "SelectedNode": "\\app\\layout.tsx",
   "PreviewInSolutionExplorer": false
 }

@@ -1,0 +1,39 @@
+.ContainerLogo {
+    display: flex;
+    align-items: center;
+    height: 10%;
+    padding-left: 10px;
+}
+
+.ContainerLogo img {
+    height: 170px;
+    width: 170px;
+
+}
+
+
+.textoSecundario {
+    display: none;
+}
+
+
+/*caso o aparelho tenha o tamanho de um navegador*/
+@media screen and (min-width: 1025px) {
+    .ContainerLogo {
+        display: flex;
+        height: 10%;
+        justify-content: left;
+    }
+
+    .ContainerLogo img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .textoSecundario {
+        padding: 30px 0px 0px 20px;
+        font-size: 15px;
+        letter-spacing: 5px;
+        display: block;
+    }
+}

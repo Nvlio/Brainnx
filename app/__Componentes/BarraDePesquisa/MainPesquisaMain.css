@@ -1,0 +1,50 @@
+.SearchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 3vh;
+    background-color: rgb(218, 218, 218);
+    margin:0% 0% 0% -8px;
+    transition: height 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.SearchBarAmpliado{
+    height: 10vh;
+}
+
+.SearchBar p{
+    color:rgb(79, 79, 79);
+    position: absolute;
+}
+
+.SearchBarAmpliado p{
+    display: none;
+}
+
+.InputButtonContainer{
+    display: flex;
+    opacity: 0;
+    transition:ease 0.3s;
+    pointer-events: none;
+}
+
+.SearchBarAmpliado .InputButtonContainer{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.SearchBarInput{
+    width: 70vw;
+    height: 4vh;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.SearchBarButton{
+    width: 20vw;
+    height: 4.62vh;
+    border-radius: 0px 10px 10px 0px;
+}
