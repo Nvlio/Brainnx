@@ -23,6 +23,7 @@ model Classe {
   id     Int      @id @default(autoincrement())
   nome   String
   estudo Estudo[]
+  visivel Boolean @default(false)
 
   criador   Usuario @relation(fields: [criadorId], references: [id])
   criadorId Int

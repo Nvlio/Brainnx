@@ -1,5 +1,7 @@
-import "../Logo/Logo.css"
+import "./Logo.css"
 
+
+// componente de Logo  é a marca do site tem a imagem junto do texto principal
 export default function Logo() {
 
     const logoTitle = {

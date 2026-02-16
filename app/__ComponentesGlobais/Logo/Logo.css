@@ -20,6 +20,7 @@
 /*caso o aparelho tenha o tamanho de um navegador*/
 @media screen and (min-width: 1025px) {
     .ContainerLogo {
+        padding-top: 40px;
         display: flex;
         height: 10%;
         justify-content: left;

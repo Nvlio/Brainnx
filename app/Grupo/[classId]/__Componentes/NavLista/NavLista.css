@@ -1,0 +1,9 @@
+.ContainerNav{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(149, 148, 148);
+    border: 1px solid black;
+    color:white;
+    margin-top: -15px;
+    z-index: 1;
+}

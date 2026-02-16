@@ -1,13 +1,15 @@
 import { PrismaClient } from '@prisma/client';
 
+// aqui se cria a instancia do prisma que vai ser usado em todo o projeto
+
 declare global {
     var prisma: PrismaClient | undefined;
 }
 
 export const prisma =
-    global.prisma ||
+    globalThis.prisma ||
     new PrismaClient({
         log: ['query'], // opcional, bom p/ debug
     });
 
-if (process.env.NODE_ENV !== 'production') global.prisma = prisma;
+if (process.env.NODE_ENV !== 'production') globalThis.prisma = prisma;

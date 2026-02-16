@@ -1,7 +1,9 @@
 "use client"
 import { useRouter } from "next/navigation";
-import "../Botao/Principal.css"
+import "./Principal.css"
 
+
+// botão de adição de classe ele é fixo no canto inferior esquerdo
 export default function BotaoAdd() {
 
     const router = useRouter();

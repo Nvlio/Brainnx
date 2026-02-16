@@ -1,0 +1,3 @@
+Este diretório contém componentes globais reutilizáveis da aplicação.
+
+Os componentes são organizados individualmente em pastas próprias, cada uma contendo seus arquivos .tsx e .css, garantindo padronização, reutilização de código e maior facilidade na manutenção do projeto.

@@ -1,9 +1,10 @@
 
 
+import "bootstrap/dist/css/bootstrap.min.css"
 
 import type { Metadata } from "next";
-import MenuGeral from "./__Componentes/Menus/Header";
-import BotaoAdd from "./__Componentes/Botao/Principal";
+import MenuGeral from "./__ComponentesGlobais/Menus/Header";
+import BotaoAdd from "./__ComponentesGlobais/Botao/Principal";
 
 export const metadata: Metadata = {
     title: "Brainnx",
@@ -20,8 +21,11 @@ export default function RootLayout({
             <body style={{ backgroundColor: "white" }}>
                 <MenuGeral />
                 {children}
-                <BotaoAdd />
+                
             </body>
         </html>
     );
 }
+
+// layout principal da raiz do projeto aqui vai ter os componentes que vão permancecer em todas as paginas como menu superior e 
+// botão de adição de classe, o children é o conteudo basico que é passado pelo parametro sendo a page da raiz do projeto.

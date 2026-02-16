@@ -1,0 +1,5 @@
+Este diretório é destinado ao armazenamento de componentes específicos da página page.txt raiz da aplicação.
+
+A organização segue o mesmo padrão do diretório __ComponentesGlobais, onde cada componente possui sua própria pasta, contendo os arquivos .tsx e .css.
+
+Essa estrutura facilita a manutenção, melhora a legibilidade do código e mantém os componentes bem isolados de acordo com o contexto de cada página.

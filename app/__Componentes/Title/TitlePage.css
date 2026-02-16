@@ -1,0 +1,24 @@
+h1{
+    font-size: 30px;
+    font-family:"font-stretch: ultra-expanded";
+    margin-top: 30px;
+
+}
+
+.Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+}
+
+hr{
+    margin-top: 0px;
+    width: 100%;
+    
+}
+
+.TabEstudos{
+    margin-top: -10px;
+}
