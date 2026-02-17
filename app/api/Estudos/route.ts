@@ -1,11 +1,11 @@
-import GetAllEstudo from "@/services/Estudos/GetAllEstudo"
+import Get from "@/services/Estudos/GET/Control";
 
 export async function GET(req: any) {
     const url = new URL(req.url);
     const idAssunto = url.searchParams.get("s")
     try {
         if (idAssunto === null) return new Response(JSON.stringify({ErrorMessage:"Nenhum assunto especificado"}),{status:400})
-        const estudos = await GetAllEstudo(idAssunto)
+        const estudos = await Get(idAssunto)
         console.log(estudos)
         if (typeof estudos === "string") throw new Error(estudos)
         return new Response(JSON.stringify(estudos), { status: 200 })

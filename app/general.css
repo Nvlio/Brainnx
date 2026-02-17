@@ -1,0 +1,24 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+.NFMask {
+    width: 100%;
+    height: 60vh;
+}
+
+.NFImage {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (min-width:1025px) {
+    .NFMask {
+        width: 100%;
+        height: 80vh;
+    }
+}

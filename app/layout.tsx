@@ -21,7 +21,6 @@ export default function RootLayout({
             <body style={{ backgroundColor: "white" }}>
                 <MenuGeral />
                 {children}
-                
             </body>
         </html>
     );
