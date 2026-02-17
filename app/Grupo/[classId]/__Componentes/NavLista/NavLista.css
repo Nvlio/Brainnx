@@ -4,6 +4,9 @@
     background-color: rgb(149, 148, 148);
     border: 1px solid black;
     color:white;
-    margin-top: -15px;
     z-index: 1;
+}
+
+.ContainerNav h1{
+    font-size: 30px;
 }

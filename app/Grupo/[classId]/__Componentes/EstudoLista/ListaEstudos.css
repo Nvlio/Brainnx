@@ -1,4 +1,4 @@
-.EstudoLista{
+.EstudoLista {
     display: flex;
     flex-direction: row;
     height: 80vh;
@@ -9,9 +9,29 @@
     overflow-y: auto;
 }
 
-.NoContent{
+.NoContent {
     display: flex;
     width: 100%;
     justify-content: center;
     color: rgb(249, 96, 96);
+}
+
+.contentItems {
+    padding: 15px 5px;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+.contentItems a {
+    width: 100%;
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.contentItems a li{
+    height: 80px;
 }
