@@ -1,15 +1,18 @@
 "use client"
 
 import { useState } from "react";
-import ClasseLista from "./__Componentes/ClasseLista/ListaClasse";
-import TitlePage from "./__Componentes/Title/TitlePage";
+import ClasseLista from "./Assuntos/__Componentes/ClasseLista/ListaClasse";
+import TitlePage from "./Assuntos/__Componentes/Title/TitlePage";
 import BarraPesquisaMain from "./__ComponentesGlobais/BarraDePesquisa/MainPesquisaMain";
 import BotaoAdd from "./__ComponentesGlobais/Botao/Principal";
+import NavMenu from "./__ComponentesGlobais/NavBarra/NavBarra";
+import MainTitle from "./__ComponentesGlobais/MainTitle/MainTitlePage";
+import NewSectionIssues from "./__ComponentesGlobais/NewIssues/NewIssues";
 
 
 
 export default function Home() {
-    const [url,setUrl] = useState("Seus")
+    const [url, setUrl] = useState("Seus")
 
 
     // pagina principal, onde vai estar os componentes basicos dessa pagina como barra de tarefa, o titulo inicial e 
@@ -17,12 +20,9 @@ export default function Home() {
     return (
         <div style={{ color: "black" }}>
             <BotaoAdd />
-            <BarraPesquisaMain />
-            <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
-                <TitlePage extra={setUrl}/>
-                <ClasseLista extra={url}/>
-            </div>
-            
+            <NavMenu />
+            <MainTitle />
+            <NewSectionIssues/>
         </div>
     );
 }

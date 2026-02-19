@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 import type { Metadata } from "next";
 import MenuGeral from "./__ComponentesGlobais/Menus/Header";
-import BotaoAdd from "./__ComponentesGlobais/Botao/Principal";
 
 export const metadata: Metadata = {
     title: "Brainnx",
