@@ -1,6 +1,5 @@
 
 
-import ColetarUm from "../../../../../_ComponentesBasicos/DataBaseFunctions/ColetarUm";
 import ContainerPage from "./Container";
 import IMGPage from "./Imagem";
 

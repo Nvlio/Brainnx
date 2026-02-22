@@ -41,6 +41,7 @@ export default function NewSectionIssues() {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+            <p>Ver Mais</p>
         </main>
     )
 }

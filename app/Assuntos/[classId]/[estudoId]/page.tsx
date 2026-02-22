@@ -25,8 +25,8 @@ export default async function EstudoPage({ params }: { params: { estudoId: strin
     const id = params.estudoId;
     const dados = await Get(null,params.estudoId,"Complete");
     console.log(dados)
-    const dadosAnterior = dados?.anteriorid ? await Get("estudoSimples", dados.anterior.id,"Simple") : null
-    const dadosPosterior = dados?.posteriorid ? await Get("estudoSimples", dados.posterior.id,"Simple") : null;
+    const dadosAnterior = dados?.anterior ? await Get("estudoSimples", dados.anterior.id,"Simple") : null
+    const dadosPosterior = dados?.posterior? await Get("estudoSimples", dados.posterior.id,"Simple") : null;
     console.log(dadosAnterior)
 
 

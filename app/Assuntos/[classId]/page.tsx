@@ -1,13 +1,21 @@
-import ListaEstudos from "./__Componentes/EstudoLista/ListaEstudos";
-import NavigatorLista from "./__Componentes/NavLista/NavLista";
+import "./page.css"
+import HeaderComp from "./__Componentes/Header/Header";
+import BarComp from "./__Componentes/searchbar/searchBar";
+import ListaEstudo from "./__Componentes/ListaContent/listaEstudo";
+import BotaoAdd from "@/app/__ComponentesGlobais/Botao/Principal";
 
 
-export default function Page({params}:{params:{classId:string}}){
-    
-    return(
-        <div>
-            <NavigatorLista/>
-            <ListaEstudos/>
+
+export default function Page({ params }: { params: { classId: string } }) {
+
+    return (
+        <div className="MainPage">
+            <HeaderComp />
+            <section>
+                <BarComp />
+                <ListaEstudo />
+            </section>
+            <BotaoAdd Funcao={"Estudo"} />
         </div>
     )
 }

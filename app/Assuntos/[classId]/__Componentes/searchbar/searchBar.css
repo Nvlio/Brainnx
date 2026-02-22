@@ -1,0 +1,17 @@
+.BarComp{
+    margin:10px;
+    background-color: rgb(120, 201, 255);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.barButton{
+    background-color: rgb(194, 242, 255);
+}
+
+@media screen and (min-width:1025px){
+    .BarComp{
+        background-color: rgba(255, 255, 255, 0);
+        width: 1000px;
+    }
+}

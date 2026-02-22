@@ -9,11 +9,11 @@
 
 .BackgroundSlit {
     position: absolute;
-    height: 300px;
+    height: 47%;
     width: 100%;
     inset: 0;
     z-index: 1;
-    margin-top: 130px;
+    margin-top: 7%;
 
     background: linear-gradient(to right,
             rgb(240, 238, 238) 60%,
@@ -46,6 +46,21 @@
     font-size: 50px;
 }
 
+.MainText {
+    background: linear-gradient(270deg,
+            #6ec6ff,
+            #7a6bff,
+            #4fc3f7,
+            #8a7dff);
+
+    background-size: 600% 600%;
+    animation: gradientmove 6s ease infinite;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
 
 @media screen and (min-width:1025px) {
@@ -54,20 +69,20 @@
     }
 
     .BackgroundSlit {
-        height: 500px;
+        height: 70%;
 
         background: linear-gradient(to right,
                 rgb(240, 238, 238) 70%,
                 black 6 0%);
     }
 
-    .ContainerTitle{
+    .ContainerTitle {
         width: 100%;
         margin-top: 0px;
     }
 
     .ContainerTitle img {
-        margin-top: 380px;
+        margin-top: 340px;
         margin-left: 180px;
         width: 20%;
         height: 50%;
@@ -79,5 +94,5 @@
         font-size: 150px;
         text-wrap: balance;
     }
-    
+
 }

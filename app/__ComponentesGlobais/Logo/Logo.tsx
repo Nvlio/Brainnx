@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./Logo.css"
 
 
@@ -10,9 +11,9 @@ export default function Logo() {
     }
 
     return (
-        <div className="ContainerLogo">
+        <a className="ContainerLogo" href="/">
             <img src="/Images/Logo/Logo.png" alt="Logo do site"/>
             <h3 className="textoSecundario">Estude do seu jeito</h3>
-        </div>
+        </a>
     );
 }

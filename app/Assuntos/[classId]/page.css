@@ -1,0 +1,12 @@
+.MainPage{
+    display: flex;
+    flex-direction: column  ;
+    background-color: rgb(234, 246, 252);
+    min-height: 90dvh;
+}
+
+@media screen and (min-width:1025px){
+    .MainPage{
+        flex-direction:row;
+    }
+}

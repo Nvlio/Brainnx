@@ -4,6 +4,9 @@
     height: 10%;
     padding-top: 40px;
     padding-left: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
 }
 
 .ContainerLogo img {

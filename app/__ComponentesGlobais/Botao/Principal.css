@@ -1,6 +1,5 @@
 
 .PrincipalButton {
-    background-color: rgb(6, 151, 255);
     color: white;
     display: flex;
     width: 70px;
@@ -8,8 +7,6 @@
     position: fixed;
     z-index: 1;
     cursor: pointer;
-    top: 750px;
-    left: 10px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -21,10 +18,21 @@
 }
 
 
+.ClasseButton{
+    background-color: rgb(6, 151, 255);
+    top: 750px;
+    left: 10px;
+}
+
+.EstudoButton{
+    background-color: rgb(21, 163, 69);
+    top: 750px;
+    right: 10px;
+}
+
 /*estilo para quando o usuario estiver usando navegaodr pelo notebook ou pelo pc*/
 @media screen and (min-width: 1025px){
     .PrincipalButton {
-    background-color: rgb(6, 151, 255);
     color: white;
     display: flex;
     width: 100px;
@@ -37,10 +45,23 @@
     align-items: center;
     justify-content: center;
     font-size: 1.5em;
+}
+
+.ClasseButton{
+    background-color: rgb(6, 151, 255);
+    top: 630px;
+    left: 0px;
     border-radius: 0 50% 0% 0%; /* só o lado direito arredondado */
 }
 
 .PrincipalButton span{
     font-size: 50px;
+}
+.EstudoButton{
+    width: 12%;
+    height: 10vh;
+    top: 600px;
+    left: 20px;
+    border-radius: 0px
 }
 }

@@ -1,4 +1,4 @@
-import ColetarUm from "../../_ComponentesBasicos/DataBaseFunctions/ColetarUm"
+import Get from "@/services/Estudos/GET/Control";
 import CarroselImagem from "./ImagemCarrousel";
 
 
@@ -8,10 +8,15 @@ import CarroselImagem from "./ImagemCarrousel";
 export default async function EstudoPage({ params }: { params: { id: string } }) {
 
     const id = await params.id;
-    const { dados, error } = await ColetarUm("estudo", params.id);
+    const dados = await Get(null, params.id, "Complete");
     console.log(dados)
-    const dadosAnterior = dados.anterior ? await ColetarUm("estudoSimples", dados.anterior.id) : null
-    const dadosPosterior = dados.posterior ? await ColetarUm("estudoSimples", dados.posterior.id) : null;
+
+    if (!dados || Array.isArray(dados) || "ErrorMsg" in dados) {
+        return <div>Erro ao carregar</div>;
+    }
+
+    const dadosAnterior = dados?.anteriorid ? await Get(null, dados?.anteriorid, "Simple") : null
+    const dadosPosterior = dados?.posteriorid ? await Get(null, dados?.posteriorid, "Simple") : null;
 
 
 
@@ -21,11 +26,11 @@ export default async function EstudoPage({ params }: { params: { id: string } })
             <hr style={{ border: "1px solid black", width: '90%' }} />
             <br />
             <div style={{ border: "1px solid black", borderRadius: "10px", backgroundColor: "white", width: "80%", height: '100%' }}>
-                <p>{ dados.corpo}</p>
+                <p>{dados.corpo}</p>
             </div>
             <br />
-            <CarroselImagem Imagens={dados?.fotos} idEstudo={id }/>
-            
+            <CarroselImagem Imagens={dados?.fotos} idEstudo={id} />
+
         </div>
-)
+    )
 }

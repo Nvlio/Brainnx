@@ -9,8 +9,13 @@
     padding-top: 50%;
 }
 
+.ContainerIssue p{
+    text-align: center;
+}
+
 @media screen and (min-width:1025px) {
     .ContainerIssue {
-        height: 70vh;
+        padding-top: 20%;
+        height: 50vh;
     }
 }
