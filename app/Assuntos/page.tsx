@@ -16,7 +16,7 @@ export default function Home() {
     // container com a lista de grupos de estudos.
     return (
         <div style={{ color: "black" }}>
-            <BotaoAdd Funcao={"Classe"}/>
+            <BotaoAdd Funcao={"Classe"} path={"/Adicionar"}/>
             <BarraPesquisaMain />
             <div style={{ display: "flex", justifyContent: "center", flexDirection: "column" }}>
                 <TitlePage extra={setUrl}/>

@@ -15,7 +15,7 @@ export default function CarroselImagem({ Imagens, idEstudo }: { Imagens: any[], 
     return (
         <>
             <h2>Fotos</h2>
-            <div style={{ width: "80%", height: "80vh", backgroundColor: "black", display: "flex", justifyItems: "center", justifyContent: "center" }}>
+            <div style={{ width: "100%", height: "35vh", backgroundColor: "black", display: "flex", justifyItems: "center", justifyContent: "center" }}>
                 {Imagens.map((imagem: any, indexImg: number) => (
                     <Image onClick={() => { router.push(`/Estudo/${idEstudo}/Imagem/${imagem.id}`) }} key={indexImg + 1} style={{ cursor: "pointer", display: index == indexImg + 1 ? "block" : "none", width: "40%", height: "auto", objectFit: "cover" }} src={`/Fotos/Especificos/${imagem.nome}`} alt="olha que legal" width={10000} height={1000} />
                 ))}

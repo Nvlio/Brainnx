@@ -30,6 +30,10 @@
     right: 10px;
 }
 
+#ButtonAddEstudo{
+    font-size: 10px !important;
+}
+
 /*estilo para quando o usuario estiver usando navegaodr pelo notebook ou pelo pc*/
 @media screen and (min-width: 1025px){
     .PrincipalButton {
@@ -64,4 +68,8 @@
     left: 20px;
     border-radius: 0px
 }
+#ButtonAddEstudo{
+    font-size: 20px !important;
+}
+
 }

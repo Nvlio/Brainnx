@@ -15,7 +15,7 @@ export default function Page({ params }: { params: { classId: string } }) {
                 <BarComp />
                 <ListaEstudo />
             </section>
-            <BotaoAdd Funcao={"Estudo"} />
+            <BotaoAdd Funcao={"Estudo"} path={`/Adicionar/${params.classId}`}/>
         </div>
     )
 }
