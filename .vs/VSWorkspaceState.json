@@ -3,14 +3,9 @@
     "",
     "\\app",
     "\\app\\api",
-    "\\app\\api\\upload",
-    "\\Componentes",
-    "\\Componentes\\widgets",
     "\\prisma",
     "\\prisma\\migrations",
-    "\\public",
-    "\\public\\Fotos",
-    "\\public\\Fotos\\Gerais"
+    "\\public"
   ],
   "PreviewInSolutionExplorer": false
 }

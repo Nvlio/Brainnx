@@ -9,13 +9,20 @@ import LoaderSymbol from "@/app/__ComponentesGlobais/Carregamento/CarregamentoSy
 export default function ClasseLista({ extra }: { extra: string }) {
     const [status, setStatus] = useState("Ocioso")
     const [dados, setDados] = useState([])
+    const [totalPagina,setTotalPagina] = useState(0)
+    const [atualPagina,setAtualPagina]= useState(1)
 
 
     // função que chama api para pegar dados da classe, tem um parametro via url que especifica se pega apenas os visiveis
     // ao usuario ou se pega todos os que forão compartilhados por outros usuarios.
     async function getData() {
-        const resp = await fetch(`/api/Classes?s=${extra}`)
-        setDados(await resp.json())
+        const resp = await fetch(`/api/Classes?s=${extra}&p=${atualPagina}`)
+        const info = await resp.json()
+        console.log(info)
+        setDados(info.data)
+        const pagina = Math.floor(info.total/ 12)
+        const resto = info.total%12
+        setTotalPagina(pagina+(resto>0?1:0))
         setStatus("Ocioso")
     }
 
@@ -23,7 +30,7 @@ export default function ClasseLista({ extra }: { extra: string }) {
         setStatus("Carregando")
         getData()
         console.log(extra)
-    }, [extra])
+    }, [extra,atualPagina])
 
     // componente de classes da pagina
     if (status === "Ocioso") {
@@ -54,7 +61,7 @@ export default function ClasseLista({ extra }: { extra: string }) {
                         }
                     </div>
                 </div>
-                <div style={{ justifyItems: "center", margin: "10px" }}><Pagination /></div>
+                {totalPagina>1?<div style={{ justifyItems: "center", margin: "10px" }}><Pagination currentPage={atualPagina} pagina={setAtualPagina} UltimaPag={totalPagina}/></div>:null}
             </div>
         )
     } else {

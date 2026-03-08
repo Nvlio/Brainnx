@@ -6,10 +6,12 @@
     export async function GET(req: any) {
         const url = new URL(req.url);
         const raw: any = url.searchParams.get("s")
+        const page:any = url.searchParams.get("p")
+        console.log(page,"psdsfefgefe")
         const extra = raw ==="Seus"?false:true
 
         try {
-            const dados = await GetSome(extra);
+            const dados = await GetSome(extra,page);
             return new Response(JSON.stringify(dados), { status: 200 })
         } catch (error: any) {
             return new Response(JSON.stringify({ ErrorMessage: error.message }), { status: 500 })

@@ -28,9 +28,11 @@ export default function AddAssunto() {
             })
             if(resp.status!==200){
                 alert(await resp.json())
+                //caso de errado apenas avisa o usuario
             }else{
                 alert(await resp.json())
                 path.push("/Assuntos")
+                //Caso dê certo avisa o usuario e redireciona para a pagina de assuntos
             }
         }
     }

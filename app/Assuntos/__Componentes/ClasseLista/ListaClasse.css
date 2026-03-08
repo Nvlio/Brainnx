@@ -9,17 +9,17 @@
     display: flex;
     flex-direction: column;
     justify-self: center;
-
+    gap: 20px
 }
 
 /* style para quando o navegador estiver rodando em um pc ou laptop*/
 @media screen and (min-width:1025px) {
     .FlexDisplay {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         gap: 20px;
         justify-content: space-between;
         justify-self: baseline;
     }
 }
-
